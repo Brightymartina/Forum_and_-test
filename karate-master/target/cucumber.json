@@ -1,0 +1,390 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Create a Events",
+        "description": "",
+        "id": "events-test;create-a-events",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 716619558,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "def eventagenda \u003d",
+            "match": {
+              "arguments": [
+                {
+                  "val": "eventagenda",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.defDocString(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "{\n  \"agenda\": [\n    {\n      \"aId\": 1,\n      \"description\": \"paper presentation\",\n      \"instructor\": \"All the best\",\n      \"time\": \"10 AM\"\n    }\n  ],\n  \"date\": \"15/9/2017\",\n  \"edition\": 7,\n  \"id\": 1,\n  \"isActive\": true,\n  \"location\": \"Coimbatore\"\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 8436366,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "url \u0027http://localhost:8080/api/events/post\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027http://localhost:8080/api/events/post\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8805128,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "request eventagenda",
+            "match": {
+              "arguments": [
+                {
+                  "val": "eventagenda",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 382876643,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1076918,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "status 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 33,
+        "name": "Get all Events",
+        "description": "",
+        "id": "events-test;get-all-events",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 55267478,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "url \u0027http://localhost:8080/api/events/get\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027http://localhost:8080/api/events/get\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 18721529,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77852,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "Delete a Event",
+        "description": "",
+        "id": "events-test;delete-a-event",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 55739305,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "def val \u003d \u00271\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "val",
+                  "offset": 4
+                },
+                {
+                  "val": "\u00271\u0027",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 5477127,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "url \u0027http://localhost:8080/api/events/delete/1\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027http://localhost:8080/api/events/delete/1\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7129214,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "request val",
+            "match": {
+              "arguments": [
+                {
+                  "val": "val",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16692645,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "method delete",
+            "match": {
+              "arguments": [
+                {
+                  "val": "delete",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 70095,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "status 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 48,
+        "name": "update the Event",
+        "description": "",
+        "id": "events-test;update-the-event",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 55283271,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "def event1 \u003d",
+            "match": {
+              "arguments": [
+                {
+                  "val": "event1",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.defDocString(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 51,
+              "value": "{\n  \"agenda\": [\n    {\n      \"aId\": 1,\n      \"description\": \"code debugging\",\n      \"instructor\": \"All the best\",\n      \"time\": \"10 AM\"\n    }\n  ],\n  \"date\": \"15/9/2017\",\n  \"edition\": 7,\n  \"id\": 1,\n  \"isActive\": true,\n  \"location\": \"Coimbatore\"\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 6999829,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "url \u0027http://localhost:8080/api/events/put/1\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027http://localhost:8080/api/events/put/1\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9556782,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "request event1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "event1",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14636056,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "method put",
+            "match": {
+              "arguments": [
+                {
+                  "val": "put",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 64554,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Events test",
+    "description": "  In order to value\n  As a role\n  I want feature",
+    "id": "events-test",
+    "keyword": "Feature",
+    "uri": "src/test/java/examples/Events/Events.feature"
+  }
+]

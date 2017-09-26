@@ -1,0 +1,891 @@
+10:31:39.510 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+10:31:39.618 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+10:31:40.297 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:31:40.619 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:31:40.684 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:01:40 GMT
+1 < Location: http://localhost:8080/get/1
+
+10:31:40.688 [main] DEBUG com.intuit.karate - response time in milliseconds: 312
+10:31:40.735 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:31:40.743 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+10:31:40.759 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:01:40 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":0,"date":"string","location":"string","isActive":true,"agenda":[{"time":"string","description":"string","instructor":"string","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":4}],"id":4},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":5}],"id":5},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":6}],"id":6},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":7}],"id":7},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":8}],"id":8},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":9}],"id":9},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":10}],"id":10},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":11}],"id":11},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":12}],"id":12},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":13}],"id":13},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":14}],"id":14},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":15}],"id":15},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":16}],"id":16},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":17}],"id":17}]
+
+10:31:40.761 [main] DEBUG com.intuit.karate - response time in milliseconds: 18
+10:31:40.801 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:31:40.825 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+10:31:40.842 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:01:40 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505278900839,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+10:31:40.842 [main] DEBUG com.intuit.karate - response time in milliseconds: 18
+10:31:40.877 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:31:40.899 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:31:40.916 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:01:40 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+10:31:40.916 [main] DEBUG com.intuit.karate - response time in milliseconds: 18
+10:44:44.066 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+10:44:44.213 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+10:44:44.879 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:44:45.231 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:44:47.288 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2328 milliseconds for URL: http://localhost:8080/api/events/post
+10:44:47.340 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:44:47.349 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+10:44:49.365 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2018 milliseconds for URL: http://localhost:8080/api/events/get
+10:44:49.406 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:44:49.428 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+10:44:51.469 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2042 milliseconds for URL: http://localhost:8080/api/events/delete/1
+10:44:51.529 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:44:51.546 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:44:53.580 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2035 milliseconds for URL: http://localhost:8080/api/events/put/1
+10:46:31.266 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+10:46:31.409 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+10:46:32.104 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:46:32.428 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:46:32.839 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:16:32 GMT
+1 < Location: http://localhost:8080/get/1
+
+10:46:32.841 [main] DEBUG com.intuit.karate - response time in milliseconds: 672
+10:46:32.863 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:46:32.885 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+10:46:33.271 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:16:32 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":1}],"id":1}]
+
+10:46:33.272 [main] DEBUG com.intuit.karate - response time in milliseconds: 388
+10:46:33.332 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:46:33.368 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+10:46:33.391 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:16:32 GMT
+
+10:46:33.391 [main] DEBUG com.intuit.karate - response time in milliseconds: 25
+10:46:33.394 [main] ERROR com.intuit.karate - status code was: 200, expected: 500, response time: 25, url: http://localhost:8080/api/events/delete/1, response: 
+10:46:33.467 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:46:33.491 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:46:33.507 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:16:32 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+10:46:33.508 [main] DEBUG com.intuit.karate - response time in milliseconds: 22
+10:47:05.581 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+10:47:05.762 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+10:47:06.413 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:06.762 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:47:06.803 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:17:06 GMT
+1 < Location: http://localhost:8080/get/1
+
+10:47:06.805 [main] DEBUG com.intuit.karate - response time in milliseconds: 300
+10:47:06.883 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:06.899 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+10:47:06.910 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:17:06 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3}]
+
+10:47:06.911 [main] DEBUG com.intuit.karate - response time in milliseconds: 14
+10:47:06.963 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:06.990 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+10:47:07.039 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:17:06 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505279827020,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+10:47:07.039 [main] DEBUG com.intuit.karate - response time in milliseconds: 50
+10:47:07.042 [main] ERROR com.intuit.karate - status code was: 500, expected: 200, response time: 50, url: http://localhost:8080/api/events/delete/1, response: {"timestamp":1505279827020,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+10:47:07.090 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:07.108 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:47:07.122 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:17:06 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+10:47:07.122 [main] DEBUG com.intuit.karate - response time in milliseconds: 15
+10:47:07.123 [main] ERROR com.intuit.karate - status code was: 200, expected: 500, response time: 15, url: http://localhost:8080/api/events/put/1, response: {"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+10:47:45.187 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+10:47:45.318 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+10:47:46.033 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:46.371 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:47:46.441 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:17:46 GMT
+1 < Location: http://localhost:8080/get/1
+
+10:47:46.443 [main] DEBUG com.intuit.karate - response time in milliseconds: 349
+10:47:46.481 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:46.490 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+10:47:46.502 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:17:46 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":4}],"id":4},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":5}],"id":5}]
+
+10:47:46.503 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+10:47:46.571 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:46.600 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+10:47:46.621 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:17:46 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505279866618,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+10:47:46.621 [main] DEBUG com.intuit.karate - response time in milliseconds: 24
+10:47:46.655 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:47:46.679 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+10:47:46.694 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:17:46 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+10:47:46.695 [main] DEBUG com.intuit.karate - response time in milliseconds: 16
+11:14:38.469 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+11:14:38.687 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+11:14:39.300 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:14:39.664 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+11:14:39.730 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:44:39 GMT
+1 < Location: http://localhost:8080/get/1
+
+11:14:39.732 [main] DEBUG com.intuit.karate - response time in milliseconds: 346
+11:14:39.785 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:14:39.801 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+11:14:39.835 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:44:39 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":4}],"id":4},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":5}],"id":5},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":6}],"id":6},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":7}],"id":7}]
+
+11:14:39.836 [main] DEBUG com.intuit.karate - response time in milliseconds: 36
+11:14:39.890 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:14:39.926 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+11:14:39.950 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:44:39 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505281479947,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+11:14:39.950 [main] DEBUG com.intuit.karate - response time in milliseconds: 26
+11:14:39.993 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:14:40.025 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+11:14:40.042 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:44:39 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+11:14:40.043 [main] DEBUG com.intuit.karate - response time in milliseconds: 19
+11:16:40.385 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+11:16:40.526 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+11:16:41.207 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:16:41.610 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+11:16:41.663 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:46:41 GMT
+1 < Location: http://localhost:8080/get/1
+
+11:16:41.665 [main] DEBUG com.intuit.karate - response time in milliseconds: 386
+11:16:41.729 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:16:41.738 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+11:16:41.751 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:46:41 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":4}],"id":4},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":5}],"id":5},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":6}],"id":6},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":7}],"id":7},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":8}],"id":8},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":9}],"id":9}]
+
+11:16:41.752 [main] DEBUG com.intuit.karate - response time in milliseconds: 14
+11:16:41.803 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:16:41.823 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+11:16:41.840 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:46:41 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505281601837,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+11:16:41.841 [main] DEBUG com.intuit.karate - response time in milliseconds: 18
+11:16:41.842 [main] ERROR com.intuit.karate - status code was: 500, expected: 200, response time: 18, url: http://localhost:8080/api/events/delete/1, response: {"timestamp":1505281601837,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+11:16:41.892 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:16:41.908 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+11:16:41.921 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:46:41 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+11:16:41.922 [main] DEBUG com.intuit.karate - response time in milliseconds: 15
+11:17:48.076 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+11:17:48.181 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Downloads\karate-master\src\test\java\examples\Events\Events.feature
+11:17:48.850 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:17:49.214 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+11:17:49.285 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Wed, 13 Sep 2017 05:47:49 GMT
+1 < Location: http://localhost:8080/get/1
+
+11:17:49.288 [main] DEBUG com.intuit.karate - response time in milliseconds: 338
+11:17:49.341 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:17:49.353 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+11:17:49.371 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:47:49 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":4}],"id":4},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":5}],"id":5},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":6}],"id":6},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":7}],"id":7},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":8}],"id":8},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":9}],"id":9},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":10}],"id":10},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":11}],"id":11}]
+
+11:17:49.372 [main] DEBUG com.intuit.karate - response time in milliseconds: 20
+11:17:49.411 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:17:49.435 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+11:17:49.447 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:47:49 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505281669445,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+11:17:49.447 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+11:17:49.483 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:17:49.500 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+11:17:49.512 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 13 Sep 2017 05:47:49 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+11:17:49.513 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+18:17:46.353 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+18:17:46.612 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Desktop\new EventAgenda project\karate-master\src\test\java\examples\Events\Events.feature
+18:17:47.689 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:17:48.158 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:17:50.218 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2429 milliseconds for URL: http://localhost:8080/api/events/post
+18:17:50.270 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:17:50.279 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+18:17:52.315 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2037 milliseconds for URL: http://localhost:8080/api/events/get
+18:17:52.360 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:17:52.381 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+18:17:54.397 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2017 milliseconds for URL: http://localhost:8080/api/events/delete/1
+18:17:54.477 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:17:54.501 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:17:56.554 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2054 milliseconds for URL: http://localhost:8080/api/events/put/1
+18:18:28.852 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+18:18:29.000 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Desktop\new EventAgenda project\karate-master\src\test\java\examples\Events\Events.feature
+18:18:29.591 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:18:29.938 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:18:31.990 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2318 milliseconds for URL: http://localhost:8080/api/events/post
+18:18:32.037 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:18:32.046 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+18:18:34.103 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2058 milliseconds for URL: http://localhost:8080/api/events/get
+18:18:34.143 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:18:34.167 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+18:18:36.192 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2026 milliseconds for URL: http://localhost:8080/api/events/delete/1
+18:18:36.250 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:18:36.273 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:18:38.287 [main] ERROR com.intuit.karate - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 2017 milliseconds for URL: http://localhost:8080/api/events/put/1
+18:19:23.103 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+18:19:23.226 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Desktop\new EventAgenda project\karate-master\src\test\java\examples\Events\Events.feature
+18:19:23.952 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:19:24.311 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:19:26.454 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Fri, 15 Sep 2017 12:49:26 GMT
+1 < Location: http://localhost:8080/get/1
+
+18:19:26.454 [main] DEBUG com.intuit.karate - response time in milliseconds: 2426
+18:19:26.749 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:19:26.761 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+18:19:28.516 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:49:28 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":1}],"id":1}]
+
+18:19:28.516 [main] DEBUG com.intuit.karate - response time in milliseconds: 1756
+18:19:28.578 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:19:28.609 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+18:19:28.633 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Length: 0
+1 < Date: Fri, 15 Sep 2017 12:49:28 GMT
+
+18:19:28.633 [main] DEBUG com.intuit.karate - response time in milliseconds: 24
+18:19:28.635 [main] ERROR com.intuit.karate - status code was: 200, expected: 500, response time: 24, url: http://localhost:8080/api/events/delete/1, response: 
+18:19:28.672 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:19:28.704 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:19:28.724 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:49:28 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+18:19:28.724 [main] DEBUG com.intuit.karate - response time in milliseconds: 36
+18:20:28.908 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+18:20:29.008 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Desktop\new EventAgenda project\karate-master\src\test\java\examples\Events\Events.feature
+18:20:29.890 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:20:30.242 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:20:30.296 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Fri, 15 Sep 2017 12:50:30 GMT
+1 < Location: http://localhost:8080/get/1
+
+18:20:30.298 [main] DEBUG com.intuit.karate - response time in milliseconds: 321
+18:20:30.356 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:20:30.365 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+18:20:30.380 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:50:30 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3}]
+
+18:20:30.380 [main] DEBUG com.intuit.karate - response time in milliseconds: 17
+18:20:30.442 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:20:30.465 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+18:20:30.573 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:50:30 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505479830556,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+18:20:30.573 [main] DEBUG com.intuit.karate - response time in milliseconds: 109
+18:20:30.575 [main] ERROR com.intuit.karate - status code was: 500, expected: 200, response time: 109, url: http://localhost:8080/api/events/delete/1, response: {"timestamp":1505479830556,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+18:20:30.620 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:20:30.644 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:20:30.661 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:50:30 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+18:20:30.662 [main] DEBUG com.intuit.karate - response time in milliseconds: 20
+18:20:59.232 [main] DEBUG c.i.karate.cucumber.CucumberRunner - init test class: class examples.ExamplesTest
+18:20:59.331 [main] DEBUG c.i.karate.cucumber.CucumberRunner - loading feature: C:\Users\aruna.c\Desktop\new EventAgenda project\karate-master\src\test\java\examples\Events\Events.feature
+18:21:00.011 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:21:00.429 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:8080/api/events/post
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 178
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"paper presentation","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:21:00.497 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Content-Length: 0
+1 < Date: Fri, 15 Sep 2017 12:51:00 GMT
+1 < Location: http://localhost:8080/get/1
+
+18:21:00.499 [main] DEBUG com.intuit.karate - response time in milliseconds: 384
+18:21:00.551 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:21:00.565 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:8080/api/events/get
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+
+18:21:00.580 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:51:00 GMT
+1 < Transfer-Encoding: chunked
+[{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":2}],"id":2},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":3}],"id":3},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":4}],"id":4},{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"paper presentation","instructor":"All the best","aId":5}],"id":5}]
+
+18:21:00.580 [main] DEBUG com.intuit.karate - response time in milliseconds: 15
+18:21:00.631 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:21:00.657 [main] DEBUG com.intuit.karate - 
+1 > DELETE http://localhost:8080/api/events/delete/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1
+1 > Content-Type: text/plain
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+1
+
+18:21:00.672 [main] DEBUG com.intuit.karate - 
+1 < 500
+1 < Connection: close
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:51:00 GMT
+1 < Transfer-Encoding: chunked
+{"timestamp":1505479860670,"status":500,"error":"Internal Server Error","exception":"org.springframework.dao.EmptyResultDataAccessException","message":"No class com.kgfsl.forum.Event entity with id 1 exists!","path":"/api/events/delete/1"}
+
+18:21:00.672 [main] DEBUG com.intuit.karate - response time in milliseconds: 16
+18:21:00.732 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:21:00.752 [main] DEBUG com.intuit.karate - 
+1 > PUT http://localhost:8080/api/events/put/1
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 174
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_111)
+{"agenda":[{"aId":1,"description":"code debugging","instructor":"All the best","time":"10 AM"}],"date":"15/9/2017","edition":7,"id":1,"isActive":true,"location":"Coimbatore"}
+
+18:21:00.765 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Fri, 15 Sep 2017 12:51:00 GMT
+1 < Transfer-Encoding: chunked
+{"edition":7,"date":"15/9/2017","location":"Coimbatore","isActive":true,"agenda":[{"time":"10 AM","description":"code debugging","instructor":"All the best","aId":1}],"id":1}
+
+18:21:00.765 [main] DEBUG com.intuit.karate - response time in milliseconds: 14
